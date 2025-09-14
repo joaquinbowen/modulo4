@@ -26,10 +26,28 @@ class Auto:
         else:
             print("Ya déjame descansar por favor!!")
 
-
-auto1=Auto("Toyota","Celica","1992",20000)
-auto1.mostrar_informacion()
-auto1.estado_auto()
-auto1.actualizar_kilometraje(15000)
-auto1.realizar_viaje(200)
-auto1.mostrar_informacion()
+    @classmethod
+    def auto_toyota(cls):
+        marca="Toyota"
+        modelo="Corolla"
+        año="2025"
+        return cls(marca,modelo,año)
+    @classmethod
+    def auto_honda(cls):
+        marca="Honda"
+        modelo="Civic"
+        año="2000"
+        kilometraje=200000
+        return cls(marca,modelo,año,kilometraje)
+    @staticmethod
+    def comparar_kilometraje(auto1,auto2):
+        if auto1.kilometraje==auto2.kilometraje:
+            return "Tienen el mismo kilometraje"
+        return "No Tienen el mismo kilometraje"
+    @staticmethod
+    def comparar_año(auto1,auto2):
+        if int(auto1.año)>int(auto2.año):
+            return f"El {auto1.marca + auto1.modelo } es mas nuevo que el {auto2.marca + auto2.modelo } "
+        elif int(auto2.año)>int(auto1.año):
+            return f"El {auto2.marca + auto2.modelo } es mas nuevo que el {auto1.marca + auto1.modelo } "
+        return "Los dos autos son del mismo año"
