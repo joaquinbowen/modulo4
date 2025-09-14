@@ -14,3 +14,6 @@ auto_honda=Auto.auto_honda()
 print(auto_honda.__dict__)
 print(Auto.comparar_año(auto_toyota,auto_honda))
 print(Auto.comparar_kilometraje(auto_honda,auto_toyota))
+
+
+
