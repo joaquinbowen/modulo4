@@ -25,4 +25,17 @@ class Laptop_Gaming(Laptop):
             resultados[juego]=f"{fps} FPS" 
         return resultados
     
+    def realizar_informe_uso(self):
+        informe=super().realizar_informe_uso()
+        informe.update({
+            "Tipo" : "Gaming",
+            "Uso Recomendado" : "Juegos de video",
+            "Horas de uso" : 10,
+            "Recomendaciones de software" : ["Antivirus","VPN"]
+        })
+        return informe
+    
+    def __str__(self):
+        return f"\n Marca: {self.marca} \n Procesador: {self.procesador} \n Memoria: {self.memoria} \n Tarjeta Grafica: {self.tarj_graf} \n Costo: {self.costo} \n Impuesto: {self.impuesto}"
+    
     pass

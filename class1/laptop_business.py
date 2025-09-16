@@ -21,4 +21,7 @@ class Laptop_Business(Laptop):
         resultado_diagnostico_base["Resultado de red"]=resultados_red
         return resultado_diagnostico_base
     
+    def __str__(self):
+        return f"\n Marca: {self.marca} \n Procesador: {self.procesador} \n Memoria: {self.memoria} \n Almacenamiento: {self.almacenamiento}\n Duracion Bateria: {self.duracion_bateria} \n Costo: {self.costo} \n Impuesto: {self.impuesto}"
+    
     pass
